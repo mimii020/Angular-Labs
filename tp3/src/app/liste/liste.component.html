@@ -1,0 +1,7 @@
+<ul>
+    <app-item *ngFor="let cv of cvs"
+        [cv]="cv"
+        (cvSelected)="onSelectCv($event)"
+    >
+    </app-item>
+</ul>
