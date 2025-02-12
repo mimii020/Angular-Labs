@@ -1,0 +1,11 @@
+<div *ngIf="hiredCvs.length > 0" class="container hire-container text text-light">
+    <h3>Hired List</h3>
+    <ul class="horizental-list">
+        <li *ngFor="let cv of hiredCvs">
+            <div class="d-flex">
+                <img [src]="cv.path" class="">
+                <h5 class="class-title">{{cv.firstname}} {{cv.name}}</h5>
+            </div>
+        </li>
+    </ul>
+</div>

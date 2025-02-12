@@ -1,0 +1,26 @@
+<main class="w-100 h-100">
+  <nav class="navbar navbar-expand-lg navbar-primary bg-light w-100">
+    <div class="container-fluid">
+      <a class="navbar-brand" >TP4</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav gap-3 d-flex justify-content-center w-100">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" (click)="navigateTo('cv')">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" (click)="navigateTo('auth-form')">Auth Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" (click)="navigateTo('image-loop')">Image Loop</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</main>
+
+<router-outlet />

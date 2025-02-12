@@ -1,0 +1,42 @@
+<div class="form-container">
+    <form #form="ngForm" class="form" (ngSubmit)="submit(form)">
+        <div>
+            <label for="email" >Email</label>
+            <input 
+            type="email" 
+            id="email" 
+            [(ngModel)]="email"
+            #emailField="ngModel"
+            required 
+            email 
+            name="email">
+            <div class="error" *ngIf="emailField.invalid && emailField.touched">
+                <small *ngIf="emailField.errors?.['required']">Email is required</small>
+                <small *ngIf="emailField.errors?.['email']">Email format is incorrect</small>
+            </div>
+        </div>
+        <div>
+
+            <label for="password">Password</label>
+            <input 
+            type="password" 
+            id="password" 
+            [(ngModel)]="password"
+            #passwordField="ngModel" 
+            required
+            minlength="4" 
+            name="password">
+            <div class="error" *ngIf="passwordField.invalid && passwordField.touched">
+                <small *ngIf="passwordField.errors?.['required']">password is required</small>
+                <small *ngIf="passwordField.errors?.['minlength']">password needs to be at least 4 characters long</small>
+            </div>
+        </div>
+        <button 
+        [disabled]="form.invalid"
+        type="submit" 
+        id="submit" 
+        name="submit"
+        class="btn btn-primary"
+        >Send</button>
+    </form>
+</div>

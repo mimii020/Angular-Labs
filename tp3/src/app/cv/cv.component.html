@@ -1,0 +1,10 @@
+<div  class="container-fluid d-flex m-3 vh-100">
+    <div class="col-6">
+        <app-liste [cvs]="cvs"></app-liste>
+    </div>
+
+    <div class="col-6 flex-column h-75">
+        <app-detail [cv]="selectedCv" class="flex-grow-1"></app-detail>
+    </div>
+
+</div>

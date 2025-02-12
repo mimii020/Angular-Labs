@@ -1,0 +1,47 @@
+<div *ngIf="cv" class="card flip-card">
+        <!--front side-->
+        <div class="flip-card-front">
+            <div class="container gradient-bg h-25">
+                <div class="circular-div">
+                    <img [src]="cv.path" alt="profile picture">
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center position-relative top-50">
+                <h4 class="card-title">{{cv.firstname}} {{cv.name}}</h4>
+                <div class="card-text mb-5 text-secondary">{{cv.job}}</div>
+                <h6 class="card-text fw-normal">{{cv.age}}</h6>
+            </div>
+    
+        </div>
+    
+        <!--back side-->
+        <div class="flip-card-back">
+            <h4 class="text-secondary fw-normal">"{{cv.motto}}"</h4>
+            <hr>
+            <h3 class="mt-5">{{cv.description}}</h3>
+            <h5 class="text-secondary">{{cv.jobKeywords}}</h5>
+            <div class="row mt-5">
+                <div class="col p-4 d-flex flex-column align-items-center">
+                    <h4>{{cv.followers}}</h4>
+                    <h5 class="text-secondary">Followers</h5>
+                </div>
+                <div class="col p-4 d-flex flex-column align-items-center">
+                    <h4>{{cv.following}}</h4>
+                    <h5 class="text-secondary">Following</h5>
+                </div>
+                <div class="col p-4 d-flex flex-column align-items-center">
+                    <h4>{{cv.projects}}</h4>
+                    <h5 class="text-secondary">Projects</h5>
+                </div>
+            </div>
+            <div class="row justify-content-center w-50">
+                <div class="col-6">
+                    <button type="button" class="btn btn-primary w-100">Hire</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-outline-primary w-100">More Details</button>
+                </div>
+            </div>
+        </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="container w-100">
+    <form *ngIf="cv">
+        <div class="form-group mb-4" *ngFor="let cvProp of cvProperties">
+            <label>{{cvProp.label}}</label>
+            <input 
+            class="form-control"
+            [id]="cvProp.key"
+            [name]="cvProp.label" 
+            type="text" 
+            [(ngModel)]="cv[cvProp.key]"
+            (ngModelChange)="updateBusinessCard()" 
+            [placeholder]="cvProp.placeholder">
+            heyy {{cv[cvProp.key]}}
+        </div>
+    </form>
+</div>

@@ -1,0 +1,4 @@
+<div class="container" #ColorBox [style.backgroundColor]="backgroundColor">
+    Parent
+    <app-child [color]="backgroundColor" (changeParentColor)="updateBackgroundColor($event)"></app-child>
+</div>>

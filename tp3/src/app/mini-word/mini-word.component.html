@@ -1,0 +1,31 @@
+<div class="container vh-100">
+    <h3 class="mb-5" [ngStyle]="{
+        'color': textColor,
+        'font-family': textFont,
+        'font-size': textSize+'px',
+    }"><ng-content>Test</ng-content></h3>
+    <div class="row w-100">
+        <div class="col-4">
+            <input 
+            id="colorPicker"
+            [(ngModel)]="textColor"
+            type="color">
+        </div>
+        <div class="col-4">
+            <input
+            id="sizePicker"
+            min="10"
+            max="100" 
+            [(ngModel)]="textSize"
+            type="number">
+        </div>
+        <div class="col-4">
+            <select
+            id="fontPicker"
+            [(ngModel)]="textFont" 
+            type="range">
+                <option *ngFor="let font of fonts" [value]="font">{{font}}</option>
+            </select>
+        </div>
+    </div>
+</div>
